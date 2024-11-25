@@ -1,7 +1,6 @@
 import React from "react";
-import heroImg from "../assets/A.m.jpg"
+import heroImg from "../assets/A.m.jpg";
 import CountUp from "react-countup";
-
 
 const Hero = () => {
   return (
@@ -15,46 +14,34 @@ const Hero = () => {
               data-aos-duration="1500"
               className="text-headingColor font-[600] text-[16px]"
             >
-              Hello welcome
+              Hello
             </h5>
-            <h1
-              data-aos="fade-up"
-              data-aos-duration="1500"
-              className="text-headingColor font-[800] text-[1.8rem] sm:text-[40px] leading-[35px] sm:leading-[46px] mt-5"
-            >
+            <h1 className="text-headingColor font-[800] text-[1.8rem] sm:text-[40px] leading-[35px] sm:leading-[46px] mt-5">
               I'm Aswin Malla
               <br /> Software Engineer{" "}
             </h1>
-            <div
-              data-aos="fade-up"
-              data-aos-duration="1800"
-              dta-aos-delay="200"
-              className="flex items-center gap-6 mt-7"
-            >
-              <a href="#contact">
-                <button className="bg-primaryColor text-white font-[500] flex items-center gap-2 hover:bg-smallTextColor ease-in duration-300 py-2 px-4 rounded-[8px]">
-                  <i className="ri-mail-line">Hire Me</i>
-                </button>
-              </a>
-              <a
-                href="#portfolio"
-                className="text-smallTextColor font-[600] text-[16px] border-b border-solid border-smallTextColor"
-              >
-                See Portfolio
-              </a>
-            </div>
-            <p
-              data-aos="fade-left"
-              data-aos-duration="1500"
-              className="flex gap-2 text-headingColor mt-12 font-[500] text-[15px] leading-7 sm:pl-14 sm:pr-10"
-            >
+
+            <p className="flex gap-2 text-headingColor mt-6 font-[500] text-[15px] leading-7 sm:pl-14 sm:pr-10">
               <span>
                 <i className="ri-apps-2-line"></i>
               </span>
               I am a full-stack developer with experience working with the PERN
-              stack(PostgreSQL, Express, React, and Node.js) . I have a passion
+              stack(PostgreSQL, Express, React, and Node.js). I have a passion
               for creating efficient and visually pleasing web applications.{" "}
             </p>
+            <div className="flex items-center justify-center gap-6 mt-7">
+              <a href="#contact">
+                <button className="bg-primaryColor text-white font-[500] flex items-center gap-2 hover:bg-smallTextColor ease-in duration-300 py-2 px-4 rounded-[8px]">
+                  <i className="ri-mail-line">Contact Me</i>
+                </button>
+              </a>
+              <a
+                href="#projects"
+                className="text-smallTextColor font-[600] text-[16px] border-b border-solid border-smallTextColor"
+              >
+                See Projects
+              </a>
+            </div>
             <div className="flex items-center gap-9 mt-14">
               <span className="text-smallTextColor text-[15px] font-[600]">
                 Follow me:

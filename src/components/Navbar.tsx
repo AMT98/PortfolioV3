@@ -22,16 +22,16 @@ const Navbar = () => {
               <li>
                 <a
                   className="text-smallTextColor text-[14px] font-[500]"
-                  href="#services"
+                  href="#career"
                 ></a>
-                Services
+                Career
               </li>
               <li>
                 <a
                   className="text-smallTextColor text-[14px] font-[500]"
-                  href="#portfolio"
+                  href="#projects"
                 ></a>
-                Portfolio
+                Projects
               </li>
               <li>
                 <a

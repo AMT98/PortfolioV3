@@ -43,9 +43,7 @@ const Hero = () => {
               </a>
             </div>
             <div className="flex items-center gap-9 mt-14">
-              <span className="text-smallTextColor text-[15px] font-[600]">
-                Follow me:
-              </span>
+              <span className="w-12 h-px bg-gray-900"></span>
               <span>
                 <a
                   href="#"

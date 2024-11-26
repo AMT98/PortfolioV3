@@ -1,9 +1,69 @@
-import React from 'react'
+import { motion } from "framer-motion";
+import { footerVariants } from "../utils/motion.tsx";
 
-const Footer = () => {
-  return (
-    <div>Footer</div>
-  )
-}
+const Footer = () => (
+  <motion.footer
+    variants={footerVariants}
+    initial="hidden"
+    whileInView="show"
+    className="py-8 relative"
+  >
+    <div className="footer-gradient" />
+    <div className={`mx-auto flex flex-col gap-8`}>
+      <div className="flex flex-col">
+        <div className="mb-[50px] h-[2px] bg-white opacity-10" />
 
-export default Footer
+        <div className="flex items-center justify-between flex-wrap gap-4">
+          <h4 className="font-extrabold text-[24px] text-white">
+            <span className="w-[50px] h-[50px] bg-gradient-to-r from-indigo-400 to-indigo-600 text-white text-[28px] font-[500] rounded-full flex items-center justify-center font-lobster">
+              A
+            </span>
+          </h4>
+          <p className="font-normal text-[14px] text-black opacity-50">
+            Copyright © 2024 Aswin Malla. All rights reserved.
+          </p>
+
+          <div className="flex gap-4">
+            <a
+              href="https://www.github.com/AMT98"
+              title="Github"
+              target="_blank"
+              className="w-[50px] h-[50px] bg-gradient-to-r from-indigo-400 to-indigo-600 text-white text-[28px] font-[500] rounded-full flex items-center justify-center"
+              rel="noreferrer"
+            >
+              <i className="ri-github-fill"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/aswinmalla/"
+              target="_blank"
+              title="Linkedin"
+              className="w-[50px] h-[50px] bg-gradient-to-r from-indigo-400 to-indigo-600 text-white text-[28px] font-[500] rounded-full flex items-center justify-center"
+              rel="noreferrer"
+            >
+              <i className="ri-linkedin-box-line"></i>
+            </a>
+            <a
+              href="mailto: aswinmalla12@gmail.com"
+              type="email"
+              title="Email"
+              className="w-[50px] h-[50px] bg-gradient-to-r from-indigo-400 to-indigo-600 text-white text-[28px] font-[500] rounded-full flex items-center justify-center"
+            >
+              <i className="ri-mail-line"></i>
+            </a>
+            <a
+              href="/Resume_AswinMalla.pdf"
+              download
+              target="_blank"
+              title="Download resume"
+              className="w-[50px] h-[50px] bg-gradient-to-r from-indigo-400 to-indigo-600 text-white text-[28px] font-[500] rounded-full flex items-center justify-center"
+            >
+              <i className="ri-article-line"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </motion.footer>
+);
+
+export default Footer;

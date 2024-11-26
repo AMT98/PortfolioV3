@@ -1,8 +1,10 @@
-import React from "react";
-import CountUp from "react-countup";
-
+import { motion } from "framer-motion";
+import { slideIn } from "../utils/motion.tsx";
 
 const Career = () => {
+  const leftSlideInVariants = slideIn("left", "tween", 0.2, 1);
+  const rightSlideInVariants = slideIn("right", "tween", 0.3, 1);
+
   return (
     <section id="timeline">
       <div className="container lg:pt-5">
@@ -21,7 +23,12 @@ const Career = () => {
               {/* vertival line through middle */}
               <div className="hidden absolute w-1 sm:block bg-indigo-500 h-full left-1/2 transform -translate-x-1/2"></div>
               {/* left card */}
-              <div className="mt-6 sm:mt-0 sm:mb-12">
+              <motion.div
+                variants={leftSlideInVariants}
+                initial="hidden"
+                animate="show"
+                className="mt-6 sm:mt-0 sm:mb-12"
+              >
                 <div className="flex items-center flex-col sm:flex-row">
                   <div className="flex justify-start w-full mx-auto items-center">
                     <div className="w-full sm:w-1/2 sm:flex-row">
@@ -32,7 +39,10 @@ const Career = () => {
                         <p className="text-[15px] text-smallTextColor group-hover:text-white group-hover:font-[500] leading-7">
                           Ascent Classical Academies
                         </p>
-                          <span className="font-[500]"> Ocotober 2023 - Present</span>
+                        <span className="font-[500]">
+                          {" "}
+                          October 2023 - Present
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -42,9 +52,14 @@ const Career = () => {
                     </figure>
                   </div>
                 </div>
-              </div>
+              </motion.div>
               {/* right card */}
-              <div className="mt-6 sm:mt-0 sm:mb-12">
+              <motion.div
+                variants={rightSlideInVariants}
+                initial="hidden"
+                animate="show"
+                className="mt-6 sm:mt-0 sm:mb-12"
+              >
                 <div className="flex items-center flex-col sm:flex-row">
                   <div className="flex justify-end w-full mx-auto items-center">
                     <div className="w-full sm:w-1/2 sm:flex-row">
@@ -55,7 +70,9 @@ const Career = () => {
                         <p className="text-[15px] text-smallTextColor group-hover:text-white group-hover:font-[500] leading-7">
                           echowin
                         </p>
-                        <span className="font-[500]">Ocotober 2022 - Ocotober 2023</span>
+                        <span className="font-[500]">
+                          Ocotober 2022 - Ocotober 2023
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -65,9 +82,14 @@ const Career = () => {
                     </figure>
                   </div>
                 </div>
-              </div>
-                            {/* left card */}
-                            <div className="mt-6 sm:mt-0 sm:mb-12">
+              </motion.div>
+              {/* left card */}
+              <motion.div
+                variants={leftSlideInVariants}
+                initial="hidden"
+                animate="show"
+                className="mt-6 sm:mt-0 sm:mb-12"
+              >
                 <div className="flex items-center flex-col sm:flex-row">
                   <div className="flex justify-start w-full mx-auto items-center">
                     <div className="w-full sm:w-1/2 sm:flex-row">
@@ -78,7 +100,9 @@ const Career = () => {
                         <p className="text-[15px] text-smallTextColor group-hover:text-white group-hover:font-[500] leading-7">
                           Namaste Transportation
                         </p>
-                          <span className="font-[500]">January 2021 - Ocotober 2022</span>
+                        <span className="font-[500]">
+                          January 2021 - Ocotober 2022
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -88,7 +112,7 @@ const Career = () => {
                     </figure>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>

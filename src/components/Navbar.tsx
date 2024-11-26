@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { RootState } from '../redux/types';
+import ThemeToggle from './ThemeToggle';
+import { useSelector } from "react-redux";
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
+  const theme = useSelector((state: RootState) => state.theme.theme); 
   const [hasShadow, setHasShadow] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -89,9 +93,10 @@ const Navbar = () => {
 
           {/* Buttons and Hamburger */}
           <div className="flex items-center gap-4">
-            <button className="hidden md:flex items-center gap-2 text-smallTextColor font-[600] border border-solid border-smallTextColor py-2 px-4 rounded-[8px] hover:bg-smallTextColor hover:text-white ease-in duration-300">
+            {/* <button className="hidden md:flex items-center gap-2 text-smallTextColor font-[600] border border-solid border-smallTextColor py-2 px-4 rounded-[8px] hover:bg-smallTextColor hover:text-white ease-in duration-300">
               <i className="ri-toggle-line"></i> Hire Me
-            </button>
+            </button> */}
+            <ThemeToggle />
             <span
               className="text-2xl text-smallTextColor md:hidden cursor-pointer"
               onClick={handleMenuToggle}

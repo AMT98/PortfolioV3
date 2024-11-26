@@ -9,12 +9,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { setDarkMode, setLightMode } from "./redux/themeSlice"; 
 import ThemeToggle from "./components/ThemeToggle"; 
 import React from "react";
+import { RootState } from './redux/types';
 
 const App: React.FC = () => {
-  const theme = useSelector(
-    (state: { theme: { theme: string } }) => state.theme.theme
-  );
+  
   const dispatch = useDispatch();
+  const theme = useSelector((state: RootState) => state.theme.theme);
+
   React.useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme) {
@@ -32,8 +33,8 @@ const App: React.FC = () => {
         theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-black"
       }
     >
-      <ThemeToggle />
       <Navbar />
+      <ThemeToggle />
       <Hero />
       <Career />
       <Projects />

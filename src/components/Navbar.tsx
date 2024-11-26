@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { RootState } from '../redux/types';
-import ThemeToggle from './ThemeToggle';
+import { RootState } from "../redux/types";
+import ThemeToggle from "./ThemeToggle";
 import { useSelector } from "react-redux";
 
 const Navbar: React.FC = () => {
-  const theme = useSelector((state: RootState) => state.theme.theme); 
+  const theme = useSelector((state: RootState) => state.theme.theme);
   const [hasShadow, setHasShadow] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -30,12 +30,12 @@ const Navbar: React.FC = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
+  
   return (
     <header
-      className={`w-full h-[80px] flex items-center bg-white fixed top-0 left-0 z-50 transition-shadow duration-300 ${
-        hasShadow ? "shadow-md" : ""
-      }`}
+    className={`w-full h-[80px] flex items-center bg-white fixed top-0 left-0 z-50 transition-shadow duration-300 ${
+      hasShadow ? "shadow-md" : ""
+    }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
@@ -91,12 +91,11 @@ const Navbar: React.FC = () => {
             </ul>
           </nav>
 
-          {/* Buttons and Hamburger */}
           <div className="flex items-center gap-4">
             {/* <button className="hidden md:flex items-center gap-2 text-smallTextColor font-[600] border border-solid border-smallTextColor py-2 px-4 rounded-[8px] hover:bg-smallTextColor hover:text-white ease-in duration-300">
               <i className="ri-toggle-line"></i> Hire Me
-            </button> */}
-            <ThemeToggle />
+              </button> */}
+              <ThemeToggle />
             <span
               className="text-2xl text-smallTextColor md:hidden cursor-pointer"
               onClick={handleMenuToggle}
@@ -110,8 +109,8 @@ const Navbar: React.FC = () => {
       {/* Mobile Menu */}
       {menuOpen && (
         <div
-          className="menu fixed top-[80px] left-0 w-full bg-white shadow-md py-4 flex flex-col items-center gap-4 z-40"
-          onClick={closeMenu}
+        className="menu fixed top-[80px] left-0 w-full bg-white shadow-md py-4 flex flex-col items-center gap-4 z-40"
+        onClick={closeMenu}
         >
           <ul className="flex flex-col items-center gap-4">
             <li>

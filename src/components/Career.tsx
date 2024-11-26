@@ -6,7 +6,7 @@ const Career = () => {
   const rightSlideInVariants = slideIn("right", "tween", 0.3, 1);
 
   return (
-    <section id="timeline">
+    <section id="career">
       <div className="container lg:pt-5">
         <div className="text-center">
           <h2 className="text-headingColor font-[800] text-[2.4rem] mb-5">

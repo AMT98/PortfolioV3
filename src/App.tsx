@@ -6,13 +6,12 @@ import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import "remixicon/fonts/remixicon.css";
 import { useDispatch, useSelector } from "react-redux";
-import { setDarkMode, setLightMode } from "./redux/themeSlice"; 
-import ThemeToggle from "./components/ThemeToggle"; 
+import { setDarkMode, setLightMode } from "./redux/themeSlice";
 import React from "react";
-import { RootState } from './redux/types';
+import { RootState } from "./redux/types";
+import ThemeToggleButton from "./components/ThemeToggle";
 
 const App: React.FC = () => {
-  
   const dispatch = useDispatch();
   const theme = useSelector((state: RootState) => state.theme.theme);
 
@@ -24,17 +23,17 @@ const App: React.FC = () => {
   }, [dispatch]);
 
   React.useEffect(() => {
-    localStorage.setItem("theme", theme); 
+    localStorage.setItem("theme", theme);
   }, [theme]);
 
   return (
     <div
-      className={
-        theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-black"
-      }
+      className={`transition-colors duration-300 ${
+        theme === "dark" ? "bg-gray-500 text-white" : "bg-white text-black" 
+      }`}
     >
       <Navbar />
-      <ThemeToggle />
+      <ThemeToggleButton />
       <Hero />
       <Career />
       <Projects />

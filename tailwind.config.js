@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: "class",
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   mode: "jit",
   theme: {
@@ -12,7 +13,7 @@ module.exports = {
         "secondary-white": "#c7c7c7",
       },
       fontFamily: {
-        lobster: ['Lobster', 'cursive'],
+        lobster: ["Lobster", "cursive"],
       },
       transitionTimingFunction: {
         "out-flex": "cubic-bezier(0.05, 0.6, 0.4, 0.9)",

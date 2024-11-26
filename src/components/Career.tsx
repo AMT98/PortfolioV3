@@ -31,8 +31,8 @@ const Career = () => {
                         </h3>
                         <p className="text-[15px] text-smallTextColor group-hover:text-white group-hover:font-[500] leading-7">
                           Ascent Classical Academies
-                          <span className="font-[500]"> Ocotober 2023 - present</span>
                         </p>
+                          <span className="font-[500]"> Ocotober 2023 - Present</span>
                       </div>
                     </div>
                   </div>
@@ -77,8 +77,8 @@ const Career = () => {
                         </h3>
                         <p className="text-[15px] text-smallTextColor group-hover:text-white group-hover:font-[500] leading-7">
                           Namaste Transportation
-                          <span className="font-[500]">January 2021 - Ocotober 2022</span>
                         </p>
+                          <span className="font-[500]">January 2021 - Ocotober 2022</span>
                       </div>
                     </div>
                   </div>

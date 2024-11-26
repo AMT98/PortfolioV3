@@ -22,7 +22,6 @@ const Navbar = () => {
 
     window.addEventListener("scroll", handleScroll);
 
-    // Cleanup event listener on component unmount
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -38,49 +37,56 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           {/* Logo Section */}
           <div className="flex items-center gap-3">
-            <span className="w-[50px] h-[50px] bg-primaryColor text-white text-[28px] font-[500] rounded-full flex items-center justify-center">
+            <span className="w-[50px] h-[50px] bg-gradient-to-r from-indigo-400 to-indigo-600 text-white text-[28px] font-[500] rounded-full flex items-center justify-center font-lobster">
               A
             </span>
+
             <span className="text-lg font-bold text-gray-700">Aswin</span>
           </div>
 
           {/* Desktop Menu */}
           <nav className="hidden md:flex items-center gap-8">
             <ul className="flex items-center gap-8">
-              <li>
+              <li className="relative group">
                 <a
-                  className="text-smallTextColor text-[14px] font-[500] hover:text-primaryColor"
+                  className="text-smallTextColor hover:text-primaryColor text-[14px] font-[500] transition-colors duration-300 ease-in-out"
                   href="#about"
                 >
                   About
                 </a>
+                {/* Hover underline */}
+                <span className="absolute left-0 bottom-[-2px] w-0 h-[2px] bg-indigo-500 transition-all duration-300 group-hover:w-full"></span>
               </li>
-              <li>
+              <li className="relative group">
                 <a
-                  className="text-smallTextColor text-[14px] font-[500] hover:text-primaryColor"
+                  className="text-smallTextColor hover:text-primaryColor text-[14px] font-[500] transition-colors duration-300 ease-in-out"
                   href="#career"
                 >
                   Career
                 </a>
+                <span className="absolute left-0 bottom-[-2px] w-0 h-[2px] bg-indigo-500 transition-all duration-300 group-hover:w-full"></span>
               </li>
-              <li>
+              <li className="relative group">
                 <a
-                  className="text-smallTextColor text-[14px] font-[500] hover:text-primaryColor"
+                  className="text-smallTextColor hover:text-primaryColor text-[14px] font-[500] transition-colors duration-300 ease-in-out"
                   href="#projects"
                 >
                   Projects
                 </a>
+                <span className="absolute left-0 bottom-[-2px] w-0 h-[2px] bg-indigo-500 transition-all duration-300 group-hover:w-full"></span>
               </li>
-              <li>
+              <li className="relative group">
                 <a
-                  className="text-smallTextColor text-[14px] font-[500] hover:text-primaryColor"
+                  className="text-smallTextColor hover:text-primaryColor text-[14px] font-[500] transition-colors duration-300 ease-in-out"
                   href="#contact"
                 >
                   Contact
                 </a>
+                <span className="absolute left-0 bottom-[-2px] w-0 h-[2px] bg-indigo-500 transition-all duration-300 group-hover:w-full"></span>
               </li>
             </ul>
           </nav>
+
           {/* Buttons and Hamburger */}
           <div className="flex items-center gap-4">
             <button className="hidden md:flex items-center gap-2 text-smallTextColor font-[600] border border-solid border-smallTextColor py-2 px-4 rounded-[8px] hover:bg-smallTextColor hover:text-white ease-in duration-300">

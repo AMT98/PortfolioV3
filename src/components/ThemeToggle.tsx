@@ -18,7 +18,7 @@ const ThemeToggleButton: React.FC = () => {
   return (
     <button
       onClick={handleThemeChange}
-      className="md:flex items-center gap-2 text-smallTextColor font-[600] border border-solid border-smallTextColor py-2 px-4 rounded-[8px] hover:bg-smallTextColor hover:text-white ease-in duration-300"
+      className="hidden md:flex items-center gap-2 text-smallTextColor font-[600] border border-solid border-smallTextColor py-2 px-4 rounded-[8px] hover:bg-smallTextColor hover:text-white ease-in duration-300"
     >
       <i className={`ri-${theme === "dark" ? "sun-line" : "moon-line"}`}></i>
     </button>

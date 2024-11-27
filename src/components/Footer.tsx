@@ -22,44 +22,6 @@ const Footer = () => (
           <p className="font-normal text-[14px] text-black opacity-50">
             Copyright © 2024 Aswin Malla. All rights reserved.
           </p>
-
-          <div className="flex gap-4">
-            <a
-              href="https://www.github.com/AMT98"
-              title="Github"
-              target="_blank"
-              className="w-[50px] h-[50px] bg-gradient-to-r from-indigo-400 to-indigo-600 text-white text-[28px] font-[500] rounded-full flex items-center justify-center"
-              rel="noreferrer"
-            >
-              <i className="ri-github-fill"></i>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/aswinmalla/"
-              target="_blank"
-              title="Linkedin"
-              className="w-[50px] h-[50px] bg-gradient-to-r from-indigo-400 to-indigo-600 text-white text-[28px] font-[500] rounded-full flex items-center justify-center"
-              rel="noreferrer"
-            >
-              <i className="ri-linkedin-box-line"></i>
-            </a>
-            <a
-              href="mailto: aswinmalla12@gmail.com"
-              type="email"
-              title="Email"
-              className="w-[50px] h-[50px] bg-gradient-to-r from-indigo-400 to-indigo-600 text-white text-[28px] font-[500] rounded-full flex items-center justify-center"
-            >
-              <i className="ri-mail-line"></i>
-            </a>
-            <a
-              href="/Resume_AswinMalla.pdf"
-              download
-              target="_blank"
-              title="Download resume"
-              className="w-[50px] h-[50px] bg-gradient-to-r from-indigo-400 to-indigo-600 text-white text-[28px] font-[500] rounded-full flex items-center justify-center"
-            >
-              <i className="ri-article-line"></i>
-            </a>
-          </div>
         </div>
       </div>
     </div>

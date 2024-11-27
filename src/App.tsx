@@ -10,6 +10,7 @@ import { setDarkMode, setLightMode } from "./redux/themeSlice";
 import React from "react";
 import { RootState } from "./redux/types";
 import ThemeToggleButton from "./components/ThemeToggle";
+import Contact from "./components/Contact";
 
 const App: React.FC = () => {
   const dispatch = useDispatch();
@@ -37,6 +38,7 @@ const App: React.FC = () => {
       <Hero />
       <Career />
       <Projects />
+      <Contact />
       <Footer />
     </div>
   );

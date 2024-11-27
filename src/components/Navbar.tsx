@@ -4,6 +4,7 @@ import ThemeToggle from "./ThemeToggle";
 import { useSelector } from "react-redux";
 
 const Navbar: React.FC = () => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const theme = useSelector((state: RootState) => state.theme.theme);
   const [hasShadow, setHasShadow] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);

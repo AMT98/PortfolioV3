@@ -1,6 +1,37 @@
 import React from "react";
+import emailjs from "emailjs-com";
 
-const Contact = () => {
+const Contact: React.FC = () => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.target as HTMLFormElement;
+    const formData = {
+      to_name: "Website Admin",
+      first_name: (form.first_name as HTMLInputElement).value,
+      last_name: (form.last_name as HTMLInputElement).value,
+      from_email: (form.from_email as HTMLInputElement).value,
+      phone_number: (form.phone_number as HTMLInputElement).value,
+      message: (form.message as HTMLTextAreaElement).value,
+    };
+    emailjs
+      .send(
+        "service_sxlzv1n",
+        "template_shdg10c",
+        formData,
+        "As14gT22qYr9_Dgv3"
+      )
+      .then((response) => {
+        console.log("Email sent successfully!", response.status, response.text);
+        alert("Your message has been sent!");
+        form.reset();
+      })
+      .catch((error) => {
+        console.error("Failed to send email.", error);
+        alert(
+          "There was an error sending your message. Please try again later."
+        );
+      });
+  };
   return (
     <div className="max-w-5xl max-lg:max-w-3xl mx-auto bg-white my-6 font-[sans-serif]">
       <div className="text-center px-6">
@@ -88,11 +119,13 @@ const Contact = () => {
         </div>
 
         <div className="p-4 lg:col-span-2">
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className="grid sm:grid-cols-2 gap-8">
               <div className="relative flex items-center">
                 <input
                   type="text"
+                  id="first_name"
+                  name="first_name"
                   placeholder="First Name"
                   className="px-2 py-3 bg-white w-full text-sm text-gray-800 border-b border-gray-300 focus:border-blue-500 outline-none"
                 />
@@ -114,6 +147,8 @@ const Contact = () => {
               <div className="relative flex items-center">
                 <input
                   type="text"
+                  id="last_name"
+                  name="last_name"
                   placeholder="Last Name"
                   className="px-2 py-3 bg-white w-full text-sm text-gray-800 border-b border-gray-300 focus:border-blue-500 outline-none"
                 />
@@ -135,8 +170,10 @@ const Contact = () => {
               <div className="relative flex items-center">
                 <input
                   type="number"
+                  id="phone_number"
+                  name="phone_number"
                   placeholder="Phone No."
-                  className="px-2 py-3 bg-white text-black w-full text-sm text-gray-800 border-b border-gray-300 focus:border-blue-500 outline-none"
+                  className="px-2 py-3 bg-white w-full text-sm text-gray-800 border-b border-gray-300 focus:border-blue-500 outline-none"
                 />
                 <svg
                   fill="#bbb"
@@ -153,8 +190,10 @@ const Contact = () => {
               <div className="relative flex items-center">
                 <input
                   type="email"
+                  id="from_email"
+                  name="from_email"
                   placeholder="Email"
-                  className="px-2 py-3 bg-white text-black w-full text-sm text-gray-800 border-b border-gray-300 focus:border-blue-500 outline-none"
+                  className="px-2 py-3 bg-white w-full text-sm text-gray-800 border-b border-gray-300 focus:border-blue-500 outline-none"
                 />
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -189,8 +228,10 @@ const Contact = () => {
 
               <div className="relative flex items-center sm:col-span-2">
                 <textarea
+                  id="message"
+                  name="message"
                   placeholder="Write Message"
-                  className="px-2 pt-3 bg-white text-black w-full text-sm text-gray-800 border-b border-gray-300 focus:border-blue-500 outline-none"
+                  className="px-2 pt-3 bg-white w-full text-sm text-gray-800 border-b border-gray-300 focus:border-blue-500 outline-none"
                 ></textarea>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -225,24 +266,10 @@ const Contact = () => {
             </div>
 
             <button
-              type="button"
+              type="submit"
               className="mt-12 flex items-center justify-center text-sm lg:ml-auto max-lg:w-full rounded-lg px-4 py-3 tracking-wide text-white bg-indigo-600 hover:bg-indigo-700"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16px"
-                height="16px"
-                fill="#fff"
-                className="mr-2"
-                viewBox="0 0 548.244 548.244"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M392.19 156.054 211.268 281.667 22.032 218.58C8.823 214.168-.076 201.775 0 187.852c.077-13.923 9.078-26.24 22.338-30.498L506.15 1.549c11.5-3.697 24.123-.663 32.666 7.88 8.542 8.543 11.577 21.165 7.879 32.666L390.89 525.906c-4.258 13.26-16.575 22.261-30.498 22.338-13.923.076-26.316-8.823-30.728-22.032l-63.393-190.153z"
-                  clip-rule="evenodd"
-                  data-original="#000000"
-                />
-              </svg>
+              <i className="ri-send-plane-fill p-1"></i>
               Send Message
             </button>
           </form>

@@ -3,9 +3,18 @@ import { projectData } from "../assets/data/projectData";
 
 const Modal = ({ activeID, setShowModal }) => {
   const project = projectData.find((project) => project.id === activeID);
+  const handleClose = () => {
+    setShowModal(false);
+  };
   return (
-    <div className="w-full h-full fixed top-0 left-0 z-10 bg-headingColor bg-opacity-40">
-      <div className="max-w-[600px] absolute top-1/2 left-1/2 z-20 bg-white rounded-[8px] transform -translate-x-1/2 -translate -y-1/2 p-5">
+    <div
+      onClick={handleClose}
+      className="w-full h-full fixed top-0 left-0 z-10 bg-headingColor bg-opacity-40"
+    >
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className="max-w-[600px] absolute top-1/2 left-1/2 z-20 bg-white rounded-[8px] transform -translate-x-1/2 -translate-y-1/2 p-5"
+      >
         <div>
           <figure>
             <img

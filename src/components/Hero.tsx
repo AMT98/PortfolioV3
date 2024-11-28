@@ -1,5 +1,5 @@
 import React from "react";
-import heroImg from "../assets/A.m.jpg";
+import heroImg from "/A.m.jpg";
 import CountUp from "react-countup";
 
 const Hero = () => {

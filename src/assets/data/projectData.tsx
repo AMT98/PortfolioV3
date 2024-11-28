@@ -1,6 +1,15 @@
 export const projectData = [
   {
     id: "1",
+    imgUrl: "/public/caringHands.png",
+    title: "Caring Hands 🧑🏽‍💻",
+    liveSite: "https://caringhandshomecare.net/",
+    github: "https://github.com/CodeThreads-FSA-VP-AM/CodeThreads",
+    category: "Frontend Development",
+    technologies: ["React", "JavaScript", "TailwindCSS"],
+  },
+  {
+    id: "2",
     imgUrl: "/codeThreads.PNG",
     title: "CodeThreads 🧑🏽‍💻",
     liveSite: "https://codethreads.netlify.app/",
@@ -9,7 +18,7 @@ export const projectData = [
     technologies: ["React", "JavaScript", "TailwindCSS"],
   },
   {
-    id: "2",
+    id: "3",
     imgUrl: "/fitnessTracker.PNG",
     title: "Fitness Tracker 🧑🏽‍💻",
     liveSite: "https://fitnesstraker.netlify.app/",
@@ -18,7 +27,7 @@ export const projectData = [
     technologies: ["React", "JavaScript", "TailwindCSS"],
   },
   {
-    id: "3",
+    id: "4",
     imgUrl: "/strangersThings.PNG",
     title: "Strangers Things 🧑🏽‍💻",
     liveSite: "https://st-amt98.netlify.app",
@@ -27,7 +36,7 @@ export const projectData = [
     technologies: ["React", "JavaScript", "TailwindCSS"],
   },
   {
-    id: "4",
+    id: "5",
     imgUrl: "/portfolioV2.PNG",
     title: "Portfolio Website 🧑🏽‍💻",
     liveSite: "https://aswinmalla.netlify.app",
@@ -37,7 +46,7 @@ export const projectData = [
     technologies: ["React", "JavaScript", "TailwindCSS"],
   },
   {
-    id: "5",
+    id: "6",
     imgUrl: "/artProject.PNG",
     title: "Art Collector 🧑🏽‍💻",
     liveSite: "https://artcollectorfsa.netlify.app/",

@@ -50,19 +50,19 @@ const Projects: React.FC = () => {
           <div className="flex gap-3">
             <button
               onClick={() => setSelectTab("all")}
-              className="text-smallTextColor border border-solid border-smallTextColor py-2 px-4 rounded-[8px]"
+              className="text-white bg-primaryColor border border-solid border-smallTextColor py-2 px-4 rounded-[8px]"
             >
               All
             </button>
             <button
               onClick={() => setSelectTab("fullstack development")}
-              className="text-smallTextColor border border-solid border-smallTextColor py-2 px-4 rounded-[8px]"
+              className="text-white bg-primaryColor border border-solid border-smallTextColor py-2 px-4 rounded-[8px]"
             >
               Fullstack Development
             </button>
             <button
               onClick={() => setSelectTab("frontend development")}
-              className="text-smallTextColor border border-solid border-smallTextColor py-2 px-4 rounded-[8px]"
+              className="text-white bg-primaryColor border border-solid border-smallTextColor py-2 px-4 rounded-[8px]"
             >
               Frontend Development
             </button>
@@ -100,7 +100,7 @@ const Projects: React.FC = () => {
           {nextItems < projects.length && projectData.length > 3 && (
             <button
               onClick={loadMoreHandler}
-              className="text-white bg-headingColor hover:bg-smallTextColor py-2 px-4 rounded-[8px] font-[500] ease-in duration-200"
+              className="text-white bg-primaryColor hover:bg-smallTextColor py-2 px-4 rounded-[8px] font-[500] ease-in duration-200"
             >
               Load More
             </button>

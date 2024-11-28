@@ -72,7 +72,8 @@ const Projects: React.FC = () => {
           {projects.slice(0, nextItems)?.map((project, index) => (
             <div
               key={index}
-              className="group max-w-full sm:w-[48.5%] md:w-[31.8%] lg:w-[32.2%] relative z-[1]"
+              className="group max-w-full sm:w-[48.5%] md:w-[31.8%] lg:w-[32.2%] relative z-[1] cursor-pointer"
+              onClick={() => showModalHandler(project.id)}
             >
               <figure>
                 <img

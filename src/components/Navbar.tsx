@@ -43,7 +43,10 @@ const Navbar: React.FC = () => {
         <div className="flex items-center justify-between">
           {/* Logo Section */}
           <div className="flex items-center gap-3">
-            <Link to="/">
+            <Link
+              to="/"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            >
               <span className="w-[50px] h-[50px] bg-gradient-to-r from-indigo-400 to-indigo-600 text-white text-[28px] font-[500] rounded-full flex items-center justify-center font-lobster">
                 A
               </span>
@@ -59,6 +62,9 @@ const Navbar: React.FC = () => {
                 <Link
                   className="text-smallTextColor hover:text-primaryColor text-[14px] font-[600] transition-colors duration-300 ease-in-out"
                   to="/career"
+                  onClick={() =>
+                    window.scrollTo({ top: 0, behavior: "smooth" })
+                  }
                 >
                   Career
                 </Link>
@@ -68,6 +74,9 @@ const Navbar: React.FC = () => {
                 <Link
                   className="text-smallTextColor hover:text-primaryColor text-[14px] font-[600] transition-colors duration-300 ease-in-out"
                   to="/projects"
+                  onClick={() =>
+                    window.scrollTo({ top: 0, behavior: "smooth" })
+                  }
                 >
                   Projects
                 </Link>
@@ -77,6 +86,9 @@ const Navbar: React.FC = () => {
                 <Link
                   className="text-smallTextColor hover:text-primaryColor text-[14px] font-[600] transition-colors duration-300 ease-in-out"
                   to="/contact"
+                  onClick={() =>
+                    window.scrollTo({ top: 0, behavior: "smooth" })
+                  }
                 >
                   Contact
                 </Link>

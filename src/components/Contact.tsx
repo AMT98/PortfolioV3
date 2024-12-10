@@ -1,7 +1,12 @@
 import React from "react";
 import emailjs from "emailjs-com";
+import { motion } from "framer-motion";
+import { TypingText } from "./CustomTexts";
+import { staggerContainer } from "../utils/motion.tsx";
 
 const Contact: React.FC = () => {
+  const staggerVariants = staggerContainer(0.1, 0.2);
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.target as HTMLFormElement;
@@ -34,9 +39,18 @@ const Contact: React.FC = () => {
   };
   return (
     <div className="max-w-5xl max-lg:max-w-3xl mx-auto bg-white my-6 font-[sans-serif] mt-12 min-h-screen">
-      <div className="text-center px-6">
-        <h2 className="text-gray-800 text-3xl font-extrabold">Contact</h2>
-      </div>
+      <motion.div
+        variants={staggerVariants}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.25 }}
+        className="text-center px-6"
+      >
+        <TypingText
+          title="| Contact"
+          textStyles="text-center text-gray-800 text-3xl font-extrabold"
+        />
+      </motion.div>
 
       <div className="grid lg:grid-cols-3 items-start gap-4 p-2 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-lg mt-12">
         <div className="bg-primaryColor rounded-lg p-6 h-full max-lg:order-1">

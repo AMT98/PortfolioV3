@@ -39,17 +39,17 @@ const Navbar: React.FC = () => {
         hasShadow ? "shadow-md" : ""
       }`}
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 mt-2 mb-1">
         <div className="flex items-center justify-between">
           {/* Logo Section */}
           <div className="flex items-center gap-3">
-          <Link to="/">
-            <span className="w-[50px] h-[50px] bg-gradient-to-r from-indigo-400 to-indigo-600 text-white text-[28px] font-[500] rounded-full flex items-center justify-center font-lobster">
-              A
-            </span>
+            <Link to="/">
+              <span className="w-[50px] h-[50px] bg-gradient-to-r from-indigo-400 to-indigo-600 text-white text-[28px] font-[500] rounded-full flex items-center justify-center font-lobster">
+                A
+              </span>
 
-            <span className="text-lg font-bold text-gray-700">Aswin</span>
-          </Link>
+              <span className="text-lg font-bold text-gray-700">Aswin</span>
+            </Link>
           </div>
 
           {/* Desktop Menu */}

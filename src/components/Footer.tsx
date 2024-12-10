@@ -1,13 +1,7 @@
-import { motion } from "framer-motion";
-import { footerVariants } from "../utils/motion.tsx";
+import React from "react";
 
 const Footer = () => (
-  <motion.footer
-    variants={footerVariants}
-    initial="hidden"
-    whileInView="show"
-    className="py-8 relative"
-  >
+  <footer className="py-8 relative">
     <div className="footer-gradient" />
     <div className={`mx-auto flex flex-col gap-8`}>
       <div className="flex flex-col">
@@ -25,7 +19,7 @@ const Footer = () => (
         </div>
       </div>
     </div>
-  </motion.footer>
+  </footer>
 );
 
 export default Footer;

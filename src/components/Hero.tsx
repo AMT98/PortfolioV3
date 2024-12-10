@@ -92,7 +92,7 @@ const Hero = () => {
             </figure>
           </div>
         </div>
-        <div className="flex flex-row gap-10 justify-center items-center mt-12">
+        <div className="flex flex-row gap-10 justify-center items-center mt-36">
           <div className="mb-10">
             <h2 className="text-headingColor font-[700] text-[32px]">
               <CountUp start={0} end={4} duration={2} suffix="+" />

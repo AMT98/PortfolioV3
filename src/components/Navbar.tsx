@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { RootState } from "../redux/types";
-import ThemeToggle from "./ThemeToggle";
-import { useSelector } from "react-redux";
+// import { RootState } from "../redux/types";
+// import ThemeToggle from "./ThemeToggle";
+// import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 const Navbar: React.FC = () => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const theme = useSelector((state: RootState) => state.theme.theme);
+  // const theme = useSelector((state: RootState) => state.theme.theme);
   const [hasShadow, setHasShadow] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -51,7 +51,7 @@ const Navbar: React.FC = () => {
                 A
               </span>
 
-              <span className="text-lg font-bold text-gray-700">Aswin</span>
+              {/* <span className="text-lg font-bold text-gray-700">Aswin</span> */}
             </Link>
           </div>
 
@@ -101,7 +101,7 @@ const Navbar: React.FC = () => {
             {/* <button className="hidden md:flex items-center gap-2 text-smallTextColor font-[600] border border-solid border-smallTextColor py-2 px-4 rounded-[8px] hover:bg-smallTextColor hover:text-white ease-in duration-300">
               <i className="ri-toggle-line"></i> Hire Me
               </button> */}
-            <ThemeToggle />
+            {/* <ThemeToggle /> */}
             <span
               className="text-2xl text-smallTextColor md:hidden cursor-pointer"
               onClick={handleMenuToggle}
@@ -120,36 +120,31 @@ const Navbar: React.FC = () => {
         >
           <ul className="flex flex-col items-center gap-4">
             <li>
-              <a
+              <Link
                 className="text-smallTextColor text-[14px] font-[500] hover:text-primaryColor"
-                href="#about"
-              >
-                About
-              </a>
-            </li>
-            <li>
-              <a
-                className="text-smallTextColor text-[14px] font-[500] hover:text-primaryColor"
-                href="#career"
+                to="/career"
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               >
                 Career
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 className="text-smallTextColor text-[14px] font-[500] hover:text-primaryColor"
-                href="#projects"
+                to="/projects"
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               >
                 Projects
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 className="text-smallTextColor text-[14px] font-[500] hover:text-primaryColor"
-                href="#contact"
+                to="/contact"
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               >
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

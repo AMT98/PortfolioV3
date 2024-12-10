@@ -1,11 +1,27 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { TypingText } from "./CustomTexts";
+import { staggerContainer } from "../utils/motion.tsx";
 
 const About = () => {
+  const staggerVariants = staggerContainer(0.1, 0.2);
   return (
-    <div className="p-6 mt-12 shadow-[rgba(0,0,0,0.5)_0px_1px_0px_0px]">
-      <h2 className="text-2xl font-bold text-indigo-600 mb-4 text-center">
-        Creative Quadrilingual Developer
-      </h2>
+    <motion.div
+      variants={staggerVariants}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.25 }}
+      className="p-6 mt-12 shadow-[rgba(0,0,0,0.5)_0px_1px_0px_0px]"
+    >
+      <h1 className="text-2xl font-bold text-indigo-600 mb-4 text-center">
+        <TypingText
+          title="| Creative Developer"
+          textStyles="text-center"
+        />
+      </h1>
+      <div className="w-full mb-4">
+        <div className="h-1 mx-auto bg-primaryColor w-64 opacity-25 my-0 py-0 rounded-t"></div>
+      </div>
       <p className="text-gray-800 leading-relaxed text-justify mb-4">
         I’m a creative <span className="font-bold italic">𝐪𝐮𝐚𝐝𝐫𝐢𝐥𝐢𝐧𝐠𝐮𝐚𝐥</span>{" "}
         developer with experience working with the
@@ -35,7 +51,7 @@ const About = () => {
         life, and working in teams to build efficient and robust applications
         that enhance client satisfaction, experience, and loyalty.
       </p>
-    </div>
+    </motion.div>
   );
 };
 

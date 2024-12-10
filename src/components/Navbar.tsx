@@ -57,7 +57,7 @@ const Navbar: React.FC = () => {
             <ul className="flex items-center gap-8">
               <li className="relative group">
                 <Link
-                  className="text-smallTextColor hover:text-primaryColor text-[14px] font-[500] transition-colors duration-300 ease-in-out"
+                  className="text-smallTextColor hover:text-primaryColor text-[14px] font-[600] transition-colors duration-300 ease-in-out"
                   to="/career"
                 >
                   Career
@@ -66,7 +66,7 @@ const Navbar: React.FC = () => {
               </li>
               <li className="relative group">
                 <Link
-                  className="text-smallTextColor hover:text-primaryColor text-[14px] font-[500] transition-colors duration-300 ease-in-out"
+                  className="text-smallTextColor hover:text-primaryColor text-[14px] font-[600] transition-colors duration-300 ease-in-out"
                   to="/projects"
                 >
                   Projects
@@ -75,7 +75,7 @@ const Navbar: React.FC = () => {
               </li>
               <li className="relative group">
                 <Link
-                  className="text-smallTextColor hover:text-primaryColor text-[14px] font-[500] transition-colors duration-300 ease-in-out"
+                  className="text-smallTextColor hover:text-primaryColor text-[14px] font-[600] transition-colors duration-300 ease-in-out"
                   to="/contact"
                 >
                   Contact

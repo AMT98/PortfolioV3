@@ -1,21 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { projectData } from "../assets/data/projectData";
-import Modal from "../utils/modal";
+import Modal from "../utils/Modal";
 
 const Projects: React.FC = () => {
   const [nextItems, setNextItems] = useState(3);
   const [projects, setProjects] = useState(projectData);
   const [selectTab, setSelectTab] = useState("all");
   const [showModal, setShowModal] = useState(false);
-  const [activeID, setActiveID] = useState(false);
-
+  const [activeID, setActiveID] = useState<string | boolean | null>(null);
   const loadMoreHandler = () => {
     setNextItems((prev) => prev + 3);
   };
-
-  const showModalHandler = (
-    id: string | boolean | ((prevState: boolean) => boolean)
-  ) => {
+  const showModalHandler = (id: string | boolean | null) => {
     setShowModal(true);
     setActiveID(id);
   };
@@ -40,7 +36,7 @@ const Projects: React.FC = () => {
 
   return (
     <section id="projects">
-      <div className="container">
+      <div className="container mt-12 min-h-screen">
         <div className="flex items-center justify-between flex-wrap">
           <div className="mb-7 sm:mb-0">
             <h3 className="text-headingColor text-[2rem] font-[700]">

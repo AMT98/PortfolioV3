@@ -11,6 +11,7 @@ import React from "react";
 import { RootState } from "./redux/types";
 import ThemeToggleButton from "./components/ThemeToggle";
 import Contact from "./components/Contact";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const App: React.FC = () => {
   const dispatch = useDispatch();
@@ -30,16 +31,20 @@ const App: React.FC = () => {
   return (
     <div
       className={`transition-colors duration-300 ${
-        theme === "dark" ? "bg-gray-500 text-white" : "bg-white text-black" 
+        theme === "dark" ? "bg-gray-500 text-white" : "bg-white text-black"
       }`}
     >
-      <Navbar />
-      <ThemeToggleButton />
-      <Hero />
-      <Career />
-      <Projects />
-      <Contact />
-      <Footer />
+      <Router>
+        <Navbar />
+        <ThemeToggleButton />
+        <Routes>
+          <Route path="/" element={<Hero />} />
+          <Route path="/career" element={<Career />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+        <Footer />
+      </Router>
     </div>
   );
 };

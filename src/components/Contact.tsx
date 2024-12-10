@@ -33,7 +33,7 @@ const Contact: React.FC = () => {
       });
   };
   return (
-    <div className="max-w-5xl max-lg:max-w-3xl mx-auto bg-white my-6 font-[sans-serif] mt-12">
+    <div className="max-w-5xl max-lg:max-w-3xl mx-auto bg-white my-6 font-[sans-serif] mt-12 min-h-screen">
       <div className="text-center px-6">
         <h2 className="text-gray-800 text-3xl font-extrabold">Contact</h2>
       </div>

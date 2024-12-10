@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { slideIn } from "../utils/motion.tsx";
+import About from "./About.tsx";
 
 const Career = () => {
   const leftSlideInVariants = slideIn("left", "tween", 0.2, 1);
@@ -7,7 +8,8 @@ const Career = () => {
 
   return (
     <section id="career">
-      <div className="container lg:pt-5">
+      <About />
+      <div className="container lg:pt-5 mt-12 min-h-screen">
         <div className="text-center">
           <h2 className="text-headingColor font-[800] text-[2.4rem] mb-5">
             Work History

@@ -1,7 +1,7 @@
 export const projectData = [
   {
     id: "1",
-    imgUrl: "/public/caringHands.png",
+    imgUrl: "/caringHands.png",
     title: "Caring Hands 🧑🏽‍💻",
     liveSite: "https://caringhandshomecare.net/",
     github: "https://github.com/CodeThreads-FSA-VP-AM/CodeThreads",

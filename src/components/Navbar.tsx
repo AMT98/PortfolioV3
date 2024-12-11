@@ -32,7 +32,7 @@ const Navbar: React.FC = () => {
   return (
     <header
       className={`w-full h-[80px] md:w-[80px] md:h-screen bg-white fixed top-0 left-0 z-50 transition-shadow duration-300 ${
-        hasShadow ? "shadow-md" : ""
+        hasShadow ? "shadow-xl" : "shadow-md"
       }`}
     >
       {/* Vertical Navbar */}
@@ -46,14 +46,14 @@ const Navbar: React.FC = () => {
           </span>
         </Link>
 
-        <nav className="flex flex-col items-center gap-4 mt-6">
+        <nav className="flex flex-col items-center gap-12 mt-6">
           <Link
             to="/career"
             className="flex flex-col items-center text-smallTextColor hover:text-primaryColor transition-colors duration-300"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
             <i className="ri-briefcase-line text-xl"></i>
-            <span className="text-[12px]">Career</span>
+            <span className="text-[12px] font-bold">Career</span>
           </Link>
           <Link
             to="/projects"
@@ -61,7 +61,7 @@ const Navbar: React.FC = () => {
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
             <i className="ri-projector-line text-xl"></i>
-            <span className="text-[12px]">Projects</span>
+            <span className="text-[12px] font-bold">Projects</span>
           </Link>
           <Link
             to="/contact"
@@ -69,7 +69,7 @@ const Navbar: React.FC = () => {
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
             <i className="ri-contacts-line text-xl"></i>
-            <span className="text-[12px]">Contact</span>
+            <span className="text-[12px] font-bold">Contact</span>
           </Link>
         </nav>
       </div>

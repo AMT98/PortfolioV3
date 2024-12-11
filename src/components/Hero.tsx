@@ -95,8 +95,8 @@ const Hero = () => {
           </div>
         </div>
       </section>
-      <Countup />
       <Technologies />
+      <Countup />
     </div>
   );
 };

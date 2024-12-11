@@ -1,12 +1,7 @@
 import React, { useState, useEffect } from "react";
-// import { RootState } from "../redux/types";
-// import ThemeToggle from "./ThemeToggle";
-// import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 const Navbar: React.FC = () => {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  // const theme = useSelector((state: RootState) => state.theme.theme);
   const [hasShadow, setHasShadow] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 

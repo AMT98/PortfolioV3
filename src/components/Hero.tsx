@@ -33,23 +33,21 @@ const Hero = () => {
                 />
               </motion.h1>
 
-              <p className="flex gap-2 text-headingColor mt-6 font-[500] text-[15px] leading-7 sm:pl-14 sm:pr-10">
-                <span>
-                  <i className="ri-apps-2-line"></i>
-                </span>
+              <span>
+                <i className="ri-apps-2-line"></i>
+              </span>
+              <p className="flex gap-1 text-headingColor mt-6 font-[500] text-[15px] leading-7 sm:pl-14 sm:pr-10">
                 I am a full-stack developer with experience working with the
                 PERN stack(PostgreSQL, Express, React, and Node.js). I have a
                 passion for creating efficient and visually pleasing web
                 applications.{" "}
               </p>
               <div className="flex items-center justify-center gap-6 mt-7">
-                <a href="#contact">
-                  <button className="bg-primaryColor text-white font-[500] flex items-center gap-2 hover:bg-smallTextColor ease-in duration-300 py-2 px-4 rounded-[8px]">
-                    <Link to="/contact">
-                      <i className="ri-mail-line">Contact Me</i>
-                    </Link>
-                  </button>
-                </a>
+                <button className="bg-primaryColor text-white font-[500] flex items-center gap-2 hover:bg-smallTextColor ease-in duration-300 py-2 px-4 rounded-[8px]">
+                  <Link to="/contact">
+                    <i className="ri-mail-line">Contact Me</i>
+                  </Link>
+                </button>
                 <Link
                   to="/projects"
                   className="text-smallTextColor font-[600] text-[16px] border-b border-solid border-smallTextColor"

@@ -10,6 +10,25 @@ export const projectData = [
   },
   {
     id: "2",
+    imgUrl: "/gemini.png",
+    title: "Gemini Clone 🧑🏽‍💻",
+    liveSite: "https://fitnesstraker.netlify.app/",
+    github: "https://github.com/AMT98/gemini-clone",
+    category: "Frontend Development",
+    technologies: ["React", "JavaScript", "TailwindCSS", "Vite", "GeminiAPI"],
+  },
+
+  {
+    id: "3",
+    imgUrl: "/api.avif",
+    title: "Todo Rails 🧑🏽‍💻",
+    liveSite: "https://st-amt98.netlify.app",
+    github: "https://github.com/AMT98/todo-app-rails",
+    category: "Fullstack Development",
+    technologies: ["React", "JavaScript", "TailwindCSS", "PostgreSQL", "Rails"],
+  },
+  {
+    id: "4",
     imgUrl: "/codeThreads.PNG",
     title: "CodeThreads 🧑🏽‍💻",
     liveSite: "https://codethreads.netlify.app/",
@@ -18,16 +37,7 @@ export const projectData = [
     technologies: ["React", "JavaScript", "TailwindCSS"],
   },
   {
-    id: "3",
-    imgUrl: "/fitnessTracker.PNG",
-    title: "Fitness Tracker 🧑🏽‍💻",
-    liveSite: "https://fitnesstraker.netlify.app/",
-    github: "https://github.com/AMT98/FitnessTracker_Front-End",
-    category: "Fullstack Development",
-    technologies: ["React", "JavaScript", "TailwindCSS"],
-  },
-  {
-    id: "4",
+    id: "5",
     imgUrl: "/strangersThings.PNG",
     title: "Strangers Things 🧑🏽‍💻",
     liveSite: "https://st-amt98.netlify.app",
@@ -36,7 +46,7 @@ export const projectData = [
     technologies: ["React", "JavaScript", "TailwindCSS"],
   },
   {
-    id: "5",
+    id: "6",
     imgUrl: "/portfolioV2.PNG",
     title: "Portfolio Website 🧑🏽‍💻",
     liveSite: "https://aswinmalla.netlify.app",
@@ -46,13 +56,22 @@ export const projectData = [
     technologies: ["React", "JavaScript", "TailwindCSS"],
   },
   {
-    id: "6",
+    id: "7",
     imgUrl: "/artProject.PNG",
     title: "Art Collector 🧑🏽‍💻",
     liveSite: "https://artcollectorfsa.netlify.app/",
     github: "https://github.com/AMT98/UNIV_Art_Collector_React_Starter",
     category: "Frontend Development",
 
+    technologies: ["React", "JavaScript", "TailwindCSS"],
+  },
+  {
+    id: "8",
+    imgUrl: "/fitnessTracker.PNG",
+    title: "Fitness Tracker 🧑🏽‍💻",
+    liveSite: "https://fitnesstraker.netlify.app/",
+    github: "https://github.com/AMT98/FitnessTracker_Front-End",
+    category: "Fullstack Development",
     technologies: ["React", "JavaScript", "TailwindCSS"],
   },
 ];

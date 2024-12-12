@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { TypingText } from "./CustomTexts";
 import { staggerContainer } from "../utils/motion.tsx";
 
-const About = () => {
+const About: React.FC = () => {
   const staggerVariants = staggerContainer(0.1, 0.2);
   return (
     <motion.div

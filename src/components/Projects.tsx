@@ -104,7 +104,7 @@ const Projects: React.FC = () => {
           )}
         </div>
       </div>
-      {showModal && <Modal activeID={activeID} setShowModal={setShowModal} />}
+      {showModal && <Modal activeId={activeID} setShowModal={setShowModal} />}{" "}
     </section>
   );
 };

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { staggerContainer, fadeIn } from "../utils/motion";
 import { TypingText } from "./CustomTexts";
 
-const Technologies = () => {
+const Technologies: React.FC = () => {
   const staggerVariants = staggerContainer(0.1, 0.2);
   return (
     <section className="bg-white py-8">

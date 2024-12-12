@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import CountUp from "react-countup";
 
-const Countup = () => {
+const Countup: React.FC = () => {
   const [startAnimation, setStartAnimation] = useState(false);
   const sectionRef = useRef<HTMLDivElement | null>(null);
 

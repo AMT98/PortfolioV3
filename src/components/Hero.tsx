@@ -1,3 +1,4 @@
+import React from 'react'
 import heroImg from "/A.m.jpg";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -6,7 +7,7 @@ import { TypingText } from "./CustomTexts";
 import Technologies from "./Technologies";
 import Countup from "./Countup";
 
-const Hero = () => {
+const Hero: React.FC = () => {
   const staggerVariants = staggerContainer(0.1, 0.2);
   return (
     <div className="min-h-screen">

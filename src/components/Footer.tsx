@@ -1,6 +1,6 @@
 import React from "react";
 
-const Footer = () => (
+const Footer: React.FC = () => (
   <footer className="py-8 relative">
     <div className="footer-gradient" />
     <div className={`mx-auto flex flex-col gap-8`}>

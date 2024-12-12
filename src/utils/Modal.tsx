@@ -1,8 +1,14 @@
-import React from "react";
+import React, { Dispatch, SetStateAction } from "react";
 import { projectData } from "../assets/data/projectData";
 
-const Modal = ({ activeID, setShowModal }) => {
-  const project = projectData.find((project) => project.id === activeID);
+interface ModalProps {
+  activeId: string | boolean | null; // Adjust type if necessary
+  setShowModal: Dispatch<SetStateAction<boolean>>;
+}
+
+
+const Modal: React.FC<ModalProps> = ({ activeId, setShowModal }) => {
+  const project = projectData.find((project) => project.id === activeId);
   const handleClose = () => {
     setShowModal(false);
   };

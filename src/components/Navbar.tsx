@@ -71,6 +71,14 @@ const Navbar: React.FC = () => {
             <i className="ri-contacts-line text-xl"></i>
             <span className="text-[12px] font-bold">Contact</span>
           </Link>
+          <Link
+            to="/resume"
+            className="flex flex-col items-center text-smallTextColor hover:text-primaryColor transition-colors duration-300"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          >
+            <i className="ri-file-line text-xl"></i>
+            <span className="text-[12px] font-bold">Resume</span>
+          </Link>
         </nav>
       </div>
 

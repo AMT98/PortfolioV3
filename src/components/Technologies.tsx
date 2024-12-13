@@ -31,15 +31,17 @@ const Technologies: React.FC = () => {
               className="flex-1 text-gray-600 rounded-t rounded-b-none overflow-hidden shadow-xl"
             >
               <div className="p-8 text-3xl font-bold text-center border-b-4  rounded-md">
-                Back-End Development
+                Front-end Development{" "}
               </div>
               <ul className="w-full text-center text-sm">
-                <li className="border-b py-4 font-bold">Ruby on Rails </li>
-                <li className="border-b py-4 font-bold">PostgreSQL</li>
-                <li className="border-b py-4 font-bold">Node.JS</li>
-                <li className="border-b py-4 font-bold">Express</li>
-                <li className="border-b py-4 font-bold">C#</li>
-                <li className="border-b py-4 font-bold">.NET</li>
+                <li className="border-b py-4 font-bold">HTML5</li>
+                <li className="border-b py-4 font-bold">CSS</li>
+                <li className="border-b py-4 font-bold">TailwindCSS</li>
+                <li className="border-b py-4 font-bold">JavaScript</li>
+                <li className="border-b py-4 font-bold">TypeScript</li>
+                <li className="border-b py-4 font-bold">ReactJs</li>
+                <li className="border-b py-4 font-bold">NextJS</li>
+                <li className="border-b py-4 font-bold">Vite</li>
               </ul>
             </motion.div>
           </div>
@@ -73,17 +75,15 @@ const Technologies: React.FC = () => {
               className="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow"
             >
               <div className="p-8 text-3xl font-bold text-center border-b-4  rounded-md">
-                Front-end Development{" "}
+                Back-End Development
               </div>
               <ul className="w-full text-center text-sm">
-                <li className="border-b py-4 font-bold">HTML5</li>
-                <li className="border-b py-4 font-bold">CSS</li>
-                <li className="border-b py-4 font-bold">TailwindCSS</li>
-                <li className="border-b py-4 font-bold">JavaScript</li>
-                <li className="border-b py-4 font-bold">TypeScript</li>
-                <li className="border-b py-4 font-bold">ReactJs</li>
-                <li className="border-b py-4 font-bold">NextJS</li>
-                <li className="border-b py-4 font-bold">Vite</li>
+                <li className="border-b py-4 font-bold">Ruby on Rails </li>
+                <li className="border-b py-4 font-bold">PostgreSQL</li>
+                <li className="border-b py-4 font-bold">Node.JS</li>
+                <li className="border-b py-4 font-bold">Express</li>
+                <li className="border-b py-4 font-bold">C#</li>
+                <li className="border-b py-4 font-bold">.NET</li>
               </ul>
               <div className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6"></div>
             </motion.div>

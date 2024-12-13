@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { TypingText } from "./CustomTexts";
 import { staggerContainer } from "../utils/motion.tsx";
 import AboutContact from "./AboutContact.tsx";
+import { Link } from "react-router-dom";
 
 const Contact: React.FC = () => {
   const staggerVariants = staggerContainer(0.1, 0.2);
@@ -125,15 +126,13 @@ const Contact: React.FC = () => {
             >
               <i className="ri-mail-line"></i>
             </a>
-            <a
-              href="/Resume_AswinMalla.pdf"
-              download
+            <Link
+              to="/resume"
               target="_blank"
-              title="Download resume"
               className="w-[50px] h-[50px] bg-gradient-to-r from-indigo-400 to-indigo-600 text-white text-[28px] font-[500] rounded-full flex items-center justify-center"
             >
               <i className="ri-article-line"></i>
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -294,7 +293,10 @@ const Contact: React.FC = () => {
           </form>
         </div>
       </div>
-      <p className="text-gray-400 pt-4 italic">Thank you for reaching out! I’ll respond to your inquiry as soon as possible via email.</p>
+      <p className="text-gray-400 pt-4 italic">
+        Thank you for reaching out! I’ll respond to your inquiry as soon as
+        possible via email.
+      </p>
     </div>
   );
 };

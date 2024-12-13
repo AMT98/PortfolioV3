@@ -87,6 +87,7 @@ const Hero: React.FC = () => {
                 <span>
                   <Link
                     to="/resume"
+                    title="Resume"
                     className="text-smallTextColor text-[15px] font-[600]"
                   >
                     <i className="ri-mail-send-fill"></i>

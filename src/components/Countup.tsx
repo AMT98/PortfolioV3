@@ -45,10 +45,12 @@ const Countup: React.FC = () => {
         <div className="bg-white shadow-lg mb-4 rounded-lg p-6 flex flex-col items-center">
           <p className="text-2xl font-bold">
             {startAnimation && (
-              <CountUp start={0} end={100} duration={3} suffix="%" />
+              <CountUp start={0} end={10} duration={3} suffix="+" />
             )}
           </p>
-          <span className="text-gray-400 text-sm mt-1">Team Player</span>
+          <span className="text-gray-400 text-sm mt-1">
+            Technologies Mastered
+          </span>
         </div>
 
         <div className="bg-white shadow-lg mb-4 rounded-lg p-6 flex flex-col items-center">

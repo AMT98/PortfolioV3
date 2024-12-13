@@ -11,7 +11,7 @@ const Hero: React.FC = () => {
   const staggerVariants = staggerContainer(0.1, 0.2);
   return (
     <div className="min-h-screen">
-      <section className="pt-0 mt-8 " id="hero">
+      <section className=" pt-0 mt-8 " id="hero">
         <div className="container pt-14">
           <div className="md:flex items-center justify-between sm:flex-col md:flex-row">
             {/* =====hero left content ====== */}
@@ -63,7 +63,9 @@ const Hero: React.FC = () => {
                 <span className="w-12 h-px bg-gray-900"></span>
                 <span>
                   <a
-                    href="#"
+                    href="https://www.github.com/AMT98"
+                    title="Github"
+                    target="_blank"
                     className="text-smallTextColor text-[15px] font-[600]"
                   >
                     <i className="ri-github-fill"></i>
@@ -71,19 +73,21 @@ const Hero: React.FC = () => {
                 </span>
                 <span>
                   <a
-                    href="#"
+                    href="https://www.linkedin.com/in/aswinmalla/"
+                    target="_blank"
+                    title="Linkedin"
                     className="text-smallTextColor text-[15px] font-[600]"
                   >
                     <i className="ri-linkedin-box-fill"></i>
                   </a>
                 </span>
                 <span>
-                  <a
-                    href="#"
+                  <Link
+                    to="/resume"
                     className="text-smallTextColor text-[15px] font-[600]"
                   >
                     <i className="ri-mail-send-fill"></i>
-                  </a>
+                  </Link>
                 </span>
               </div>
             </div>
@@ -99,8 +103,8 @@ const Hero: React.FC = () => {
           </div>
         </div>
       </section>
-      <Technologies />
       <Countup />
+      <Technologies />
     </div>
   );
 };

@@ -38,7 +38,7 @@ const Contact: React.FC = () => {
       });
   };
   return (
-    <div className="max-w-5xl max-lg:max-w-3xl mx-auto bg-white my-6 font-[sans-serif] mt-12 min-h-screen">
+    <div className="mt-24 max-w-5xl max-lg:max-w-3xl mx-auto bg-white my-6 font-[sans-serif] min-h-screen">
       <motion.div
         variants={staggerVariants}
         initial="hidden"

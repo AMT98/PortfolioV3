@@ -16,7 +16,7 @@ const About: React.FC = () => {
         <span className="italic">Creative</span>{" "}
         <span className="font-bold italic text-primaryColor">Developer </span>{" "}
       </h1>
-      <p className="text-gray-800 leading-relaxed text-justify mb-4">
+      <p className="text-gray-800 leading-relaxed mb-4">
         <span className="italic">I</span> am a{" "}
         <span className="font-bold italic text-primaryColor">developer</span>{" "}
         passionate about crafting innovative web solutions by leveraging

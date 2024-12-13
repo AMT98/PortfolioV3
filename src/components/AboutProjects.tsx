@@ -18,7 +18,7 @@ const About: React.FC = () => {
           Through Projects{" "}
         </span>{" "}
       </h1>
-      <p className="text-gray-800 leading-relaxed text-justify mb-4">
+      <p className="text-gray-800 leading-relaxed mb-4">
         In my personal projects, I focus on leveraging emerging technologies to
         build functional and innovative web applications. These projects allow
         me to explore new tools and frameworks while honing my skills and

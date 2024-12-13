@@ -16,7 +16,7 @@ const About: React.FC = () => {
         <span className="italic">Let’s</span>{" "}
         <span className="font-bold italic text-primaryColor">Connect </span>{" "}
       </h1>
-      <p className="text-gray-800 leading-relaxed text-justify mb-4">
+      <p className="text-gray-800 leading-relaxed mb-4">
         I’d love to hear from you! Whether you’re interested in discussing a
         potential project, sharing ideas, or simply want to chat about
         technology, feel free to reach out. I’m always open to new opportunities

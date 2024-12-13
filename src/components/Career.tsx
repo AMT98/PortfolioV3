@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { slideIn } from "../utils/motion.tsx";
-import About from "./About.tsx";
+import About from "./AboutCareer.tsx";
 import { TypingText } from "./CustomTexts";
 import { staggerContainer } from "../utils/motion.tsx";
 

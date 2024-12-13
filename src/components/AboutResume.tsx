@@ -16,13 +16,12 @@ const About: React.FC = () => {
         <span className="italic">View My </span>{" "}
         <span className="font-bold italic text-primaryColor">Resume </span>{" "}
       </h1>
-      <p className="text-gray-800 leading-relaxed text-justify mb-4">
+      <p className="text-gray-800 leading-relaxed mb-4">
         I’ve curated my resume to highlight my skills, experience, and the
         projects I’ve worked on. If you’re interested in seeing more about my
         background and how I can contribute to your team, feel free to download
         or view my resume.
       </p>
-      
     </motion.div>
   );
 };

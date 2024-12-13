@@ -66,20 +66,20 @@ const Navbar: React.FC = () => {
               Projects
             </Link>
             <Link
-              to="/contact"
-              className="text-smallTextColor hover:text-primaryColor transition-colors duration-300"
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            >
-              <i className="ri-contacts-line text-xl"></i>
-              Contact
-            </Link>
-            <Link
               to="/resume"
               className="text-smallTextColor hover:text-primaryColor transition-colors duration-300"
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             >
               <i className="ri-file-line text-xl"></i>
               Resume
+            </Link>
+            <Link
+              to="/contact"
+              className="text-smallTextColor hover:text-primaryColor transition-colors duration-300"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            >
+              <i className="ri-contacts-line text-xl"></i>
+              Contact
             </Link>
           </nav>
 
@@ -117,20 +117,20 @@ const Navbar: React.FC = () => {
               Projects
             </Link>
             <Link
-              to="/contact"
-              className="text-smallTextColor hover:text-primaryColor transition-colors duration-300"
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            >
-              <i className="ri-contacts-line text-xl"></i>
-              Contact
-            </Link>
-            <Link
               to="/resume"
               className="text-smallTextColor hover:text-primaryColor transition-colors duration-300"
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             >
               <i className="ri-file-line text-xl"></i>
               Resume
+            </Link>
+            <Link
+              to="/contact"
+              className="text-smallTextColor hover:text-primaryColor transition-colors duration-300"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            >
+              <i className="ri-contacts-line text-xl"></i>
+              Contact
             </Link>
           </nav>
         </div>

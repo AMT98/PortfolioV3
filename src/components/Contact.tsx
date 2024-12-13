@@ -3,6 +3,7 @@ import emailjs from "emailjs-com";
 import { motion } from "framer-motion";
 import { TypingText } from "./CustomTexts";
 import { staggerContainer } from "../utils/motion.tsx";
+import AboutContact from "./AboutContact.tsx";
 
 const Contact: React.FC = () => {
   const staggerVariants = staggerContainer(0.1, 0.2);
@@ -38,7 +39,7 @@ const Contact: React.FC = () => {
       });
   };
   return (
-    <div className="mt-24 max-w-5xl max-lg:max-w-3xl mx-auto bg-white my-6 font-[sans-serif] min-h-screen">
+    <div className="max-w-5xl max-lg:max-w-3xl mx-auto bg-white my-6 font-[sans-serif] min-h-screen">
       <motion.div
         variants={staggerVariants}
         initial="hidden"
@@ -46,9 +47,10 @@ const Contact: React.FC = () => {
         viewport={{ once: true, amount: 0.25 }}
         className="text-center px-6"
       >
+        <AboutContact />
         <TypingText
           title="| Contact"
-          textStyles="text-center text-gray-800 text-3xl font-extrabold"
+          textStyles="text-center text-gray-800 text-3xl font-extrabold mt-12"
         />
       </motion.div>
 

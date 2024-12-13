@@ -4,6 +4,7 @@ import Modal from "../utils/Modal";
 import { motion } from "framer-motion";
 import { staggerContainer } from "../utils/motion";
 import { TypingText } from "./CustomTexts";
+import AboutProjects from "./AboutProjects";
 
 const Projects: React.FC = () => {
   const [nextItems, setNextItems] = useState(3);
@@ -42,6 +43,7 @@ const Projects: React.FC = () => {
 
   return (
     <section id="projects">
+      <AboutProjects />
       <div className="container mt-24 min-h-screen">
         <div className="flex items-center justify-between flex-wrap">
           <motion.div

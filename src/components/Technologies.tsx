@@ -14,8 +14,8 @@ const Technologies: React.FC = () => {
         viewport={{ once: true, amount: 0.25 }}
         className="container mx-auto px-2 pt-4 pb-12 text-gray-800"
       >
-        <h1 className="w-full my-2 text-5xl font-bold leading-tight text-center text-primaryColor">
-          <TypingText title="| Technologies" textStyles="text-center" />
+        <h1 className="w-full my-2 text-5xl font-bold leading-tight text-center text-primary-black">
+          <TypingText title="| Technologies" textStyles="text-center text-primary-black" />
         </h1>
         <div className="w-full mb-4">
           <div className="h-1 mx-auto bg-primaryColor w-64 opacity-25 my-0 py-0 rounded-t"></div>

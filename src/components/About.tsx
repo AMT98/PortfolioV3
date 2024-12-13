@@ -16,40 +16,26 @@ const About: React.FC = () => {
       <h1 className="text-2xl font-bold text-indigo-600 mb-4 text-center">
         <TypingText
           title="| Creative Developer"
-          textStyles="text-center"
+          textStyles="text-center text-primary-black"
         />
       </h1>
       <div className="w-full mb-4">
         <div className="h-1 mx-auto bg-primaryColor w-64 opacity-25 my-0 py-0 rounded-t"></div>
       </div>
       <p className="text-gray-800 leading-relaxed text-justify mb-4">
-        I’m a creative <span className="font-bold italic">𝐪𝐮𝐚𝐝𝐫𝐢𝐥𝐢𝐧𝐠𝐮𝐚𝐥</span>{" "}
-        developer with experience working with the
-        <span className="text-indigo-500 font-medium"> PERN stack</span>{" "}
-        (PostgreSQL, Express.js, React.js, and Node.js). In my work, I aspire to
-        be an ideal amalgamation of two things:
-      </p>
-      <ul className="list-inside text-gray-800 leading-relaxed">
-        <li>
-          <span className="font-medium text-indigo-600">
-            ① Technical skills:
-          </span>{" "}
-          Staying current with emerging web development technologies.
-        </li>
-        <li>
-          <span className="font-medium text-indigo-600">② Soft skills:</span>{" "}
-          Making a difference through complex problem-solving, active learning,
-          and critical thinking.
-        </li>
-      </ul>
-      <p className="text-gray-800 leading-relaxed text-justify mt-4">
-        I have a{" "}
-        <span className="text-indigo-600 font-medium">growth ⇧ mindset</span>,
-        have worked in various cross-cultural settings, and have developed a
-        holistic approach to writing code and coming up with creative tech
-        solutions. Passionate about learning new technologies, bringing ideas to
-        life, and working in teams to build efficient and robust applications
-        that enhance client satisfaction, experience, and loyalty.
+        <span className="italic">I</span> am a versatile{" "}
+        <span className="font-bold italic text-primaryColor">
+          full-stack developer
+        </span>{" "}
+        with a passion for leveraging cutting-edge technologies to create
+        innovative web solutions. Experienced in the
+        <span className="text-primaryColor font-bold"> PERN stack</span> I
+        strive to combine strong technical expertise with effective soft skills
+        to drive impactful results. My approach is rooted in continuous
+        learning, critical thinking, and problem-solving. With a growth mindset
+        and experience working in diverse teams, I focus on delivering
+        high-quality applications that enhance user experience, client
+        satisfaction, and business success.
       </p>
     </motion.div>
   );

@@ -21,7 +21,10 @@ const Career = () => {
       >
         <div className="text-center">
           <h2 className="text-headingColor font-[800] text-[2.4rem] mb-5">
-            <TypingText title="| Work History" textStyles="text-center" />
+            <TypingText
+              title="| Work History"
+              textStyles="text-center text-primary-black"
+            />
           </h2>
           <div className="w-full mb-4">
             <div className="h-1 mx-auto bg-primaryColor w-64 opacity-25 my-0 py-0 rounded-t"></div>

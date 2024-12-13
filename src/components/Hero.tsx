@@ -37,14 +37,17 @@ const Hero: React.FC = () => {
               <span>
                 <i className="ri-apps-2-line"></i>
               </span>
-              <p className="flex gap-1 text-headingColor mt-6 font-[500] text-[15px] leading-7 sm:pl-14 sm:pr-10">
-                A full-stack developer with a strong background in building
-                efficient and reliable web applications. Experienced in creating
-                user-focused solutions using modern technologies and frameworks.
-                Adept at writing clean, maintainable code and collaborating with
-                teams to drive projects forward. Passionate about
-                problem-solving, optimizing performance, and delivering
-                exceptional user experiences.
+              <p className="text-headingColor mt-6 font-[500] text-[15px] leading-7 sm:pl-14 sm:pr-10">
+                A{" "}
+                <span className="font-bold italic text-primaryColor">
+                  full-stack developer
+                </span>{" "}
+                with a strong background in building efficient and reliable web
+                applications. Experienced in creating user-focused solutions
+                using modern technologies and frameworks. Adept at writing
+                clean, maintainable code and collaborating with teams to drive
+                projects forward. Passionate about problem-solving, optimizing
+                performance, and delivering exceptional user experiences.
               </p>
               <div className="flex items-center justify-center gap-6 mt-7">
                 <button className="bg-primaryColor text-white font-[500] flex items-center gap-2 hover:bg-smallTextColor ease-in duration-300 py-2 px-4 rounded-[8px]">

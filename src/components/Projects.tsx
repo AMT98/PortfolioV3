@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { projectData } from "../assets/data/projectData";
 import Modal from "../utils/Modal";
+import { motion } from "framer-motion";
+import { staggerContainer } from "../utils/motion";
+import { TypingText } from "./CustomTexts";
 
 const Projects: React.FC = () => {
   const [nextItems, setNextItems] = useState(3);
@@ -8,6 +11,8 @@ const Projects: React.FC = () => {
   const [selectTab, setSelectTab] = useState("all");
   const [showModal, setShowModal] = useState(false);
   const [activeID, setActiveID] = useState<string | boolean | null>(null);
+
+  const staggerVariants = staggerContainer(0.1, 0.2);
 
   const loadMoreHandler = () => {
     setNextItems((prev) => prev + 3);
@@ -39,11 +44,20 @@ const Projects: React.FC = () => {
     <section id="projects">
       <div className="container mt-24 min-h-screen">
         <div className="flex items-center justify-between flex-wrap">
-          <div className="mb-7 sm:mb-0">
-            <h3 className="text-headingColor text-[2rem] font-[700]">
-              My recent projects
-            </h3>
-          </div>
+          <motion.div
+            variants={staggerVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.25 }}
+            className="mb-7 sm:mb-0 my-2"
+          >
+            <h1 className="w-full my-2 text-5xl font-bold leading-tight text-center text-primary-black">
+              <TypingText
+                title="| Featured Projects"
+                textStyles="text-primary-black"
+              />
+            </h1>
+          </motion.div>
           <div className="flex gap-3">
             <button
               onClick={() => setSelectTab("all")}

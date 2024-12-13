@@ -50,16 +50,16 @@ const Hero: React.FC = () => {
                 performance, and delivering exceptional user experiences.
               </p>
               <div className="flex items-center justify-center gap-6 mt-7">
-                <button className="bg-primaryColor text-white font-[500] flex items-center gap-2 hover:bg-smallTextColor ease-in duration-300 py-2 px-4 rounded-[8px]">
+                <button className="bg-primaryColor text-white font-[500] flex items-center gap-2 hover:shadow-md hover:bg-smallTextColor ease-in duration-300 py-2 px-4 rounded-[8px]">
                   <Link to="/contact">
-                    <i className="ri-mail-line">Contact Me</i>
+                    <i className="ri-mail-line">Let's Connect</i>
                   </Link>
                 </button>
                 <Link
                   to="/projects"
-                  className="text-smallTextColor font-[600] text-[16px] border-b border-solid border-smallTextColor"
+                  className="text-smallTextColor font-[600] text-[16px] border-b hover:text-primaryColor hover:shadow-md border-solid border-smallTextColor"
                 >
-                  See Projects
+                  View My Work
                 </Link>
               </div>
               <div className="flex items-center gap-9 mt-14">

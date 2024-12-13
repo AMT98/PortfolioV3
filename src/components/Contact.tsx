@@ -294,6 +294,7 @@ const Contact: React.FC = () => {
           </form>
         </div>
       </div>
+      <p className="text-gray-400 pt-4 italic">Thank you for reaching out! I’ll respond to your inquiry as soon as possible via email.</p>
     </div>
   );
 };

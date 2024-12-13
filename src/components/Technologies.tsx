@@ -15,7 +15,10 @@ const Technologies: React.FC = () => {
         className="container mx-auto px-2 pt-4 pb-12 text-gray-800"
       >
         <h1 className="w-full my-2 text-5xl font-bold leading-tight text-center text-primary-black">
-          <TypingText title="| Technologies" textStyles="text-center text-primary-black" />
+          <TypingText
+            title="| Technologies"
+            textStyles="text-center text-primary-black"
+          />
         </h1>
         <div className="w-full mb-4">
           <div className="h-1 mx-auto bg-primaryColor w-64 opacity-25 my-0 py-0 rounded-t"></div>
@@ -41,7 +44,7 @@ const Technologies: React.FC = () => {
             </motion.div>
           </div>
 
-          <div className="flex flex-col w-5/6 lg:w-1/3 mx-auto lg:mx-0 rounded-lg text-black mt-4 sm:-mt-6 shadow-lg z-10">
+          <div className="flex flex-col w-5/6 lg:w-1/3 mx-auto lg:mx-0 rounded-lg text-black mt-4 sm:-mt-6 shadow-lg z-10 overflow-hidden">
             <motion.div
               variants={fadeIn("up", "tween", 0.2, 1)}
               className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow"

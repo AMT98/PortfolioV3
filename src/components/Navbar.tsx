@@ -32,10 +32,9 @@ const Navbar: React.FC = () => {
   return (
     <header
       className={`w-full bg-white fixed top-0 left-0 z-50 transition-shadow duration-300 ${
-        hasShadow ? "shadow-xl" : "shadow-md"
+        hasShadow ? "shadow-md" : ""
       }`}
     >
-      {/* Horizontal Navbar */}
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-[80px]">
           <Link
@@ -47,7 +46,7 @@ const Navbar: React.FC = () => {
             </span>
           </Link>
 
-          {/* Menu Items (Horizontal) */}
+          {/* Desktop */}
           <nav className="hidden md:flex space-x-8">
             <Link
               to="/career"
@@ -83,7 +82,6 @@ const Navbar: React.FC = () => {
             </Link>
           </nav>
 
-          {/* Hamburger Menu for Mobile */}
           <span
             className="md:hidden text-2xl text-smallTextColor cursor-pointer"
             onClick={handleMenuToggle}
@@ -93,7 +91,7 @@ const Navbar: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile */}
       {menuOpen && (
         <div
           className="fixed top-[80px] left-0 w-full bg-white shadow-md py-4 flex flex-col items-center gap-4 z-40"

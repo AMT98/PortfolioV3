@@ -65,12 +65,14 @@ const Contact: React.FC = () => {
         viewport={{ once: true, amount: 0.25 }}
         className="text-center px-6"
       >
-        <About title="Let's"
-        description="       I’d love to hear from you! Whether you’re interested in discussing a
+        <About
+          title="Let's"
+          description="       I’d love to hear from you! Whether you’re interested in discussing a
         potential project, sharing ideas, or simply want to chat about
         technology, feel free to reach out. I’m always open to new opportunities
         and collaborations."
-        titleHighlight="Connect" />
+          titleHighlight="Connect"
+        />
         <TypingText
           title="| Contact"
           textStyles="text-center text-gray-800 text-3xl font-extrabold mt-12"
@@ -224,7 +226,7 @@ const Contact: React.FC = () => {
 
               <button
                 type="submit"
-                className="mt-6 px-6 py-3 bg-blue-500 text-white font-bold rounded-lg shadow-md hover:bg-blue-600"
+                className="mt-6 px-6 py-3 bg-primaryColor text-white font-bold rounded-lg shadow-md hover:shadow-lg"
               >
                 Send Message
               </button>

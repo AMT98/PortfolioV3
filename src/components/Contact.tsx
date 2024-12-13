@@ -3,14 +3,13 @@ import emailjs from "emailjs-com";
 import { motion } from "framer-motion";
 import { TypingText } from "./CustomTexts";
 import { staggerContainer } from "../utils/motion.tsx";
-import AboutContact from "./AboutContact.tsx";
+import About from "./About.tsx";
 import { Link } from "react-router-dom";
 
 const Contact: React.FC = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   useEffect(() => {
-    // Reset form on page revisit
     setIsSubmitted(false);
   }, []);
 
@@ -18,7 +17,6 @@ const Contact: React.FC = () => {
     e.preventDefault();
     const form = e.target as HTMLFormElement;
 
-    // Validation
     const firstName = (form.first_name as HTMLInputElement).value.trim();
     const lastName = (form.last_name as HTMLInputElement).value.trim();
     const email = (form.from_email as HTMLInputElement).value.trim();
@@ -48,7 +46,7 @@ const Contact: React.FC = () => {
       )
       .then((response) => {
         console.log("Email sent successfully!", response.status, response.text);
-        setIsSubmitted(true); // Show Thank You message
+        setIsSubmitted(true);
       })
       .catch((error) => {
         console.error("Failed to send email.", error);
@@ -67,7 +65,12 @@ const Contact: React.FC = () => {
         viewport={{ once: true, amount: 0.25 }}
         className="text-center px-6"
       >
-        <AboutContact />
+        <About title="Let's"
+        description="       I’d love to hear from you! Whether you’re interested in discussing a
+        potential project, sharing ideas, or simply want to chat about
+        technology, feel free to reach out. I’m always open to new opportunities
+        and collaborations."
+        titleHighlight="Connect" />
         <TypingText
           title="| Contact"
           textStyles="text-center text-gray-800 text-3xl font-extrabold mt-12"

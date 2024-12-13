@@ -4,7 +4,7 @@ import Modal from "../utils/Modal";
 import { motion } from "framer-motion";
 import { staggerContainer } from "../utils/motion";
 import { TypingText } from "./CustomTexts";
-import AboutProjects from "./AboutProjects";
+import About from "./About";
 
 const Projects: React.FC = () => {
   const [nextItems, setNextItems] = useState(3);
@@ -43,7 +43,20 @@ const Projects: React.FC = () => {
 
   return (
     <section id="projects">
-      <AboutProjects />
+      <About
+        title="Exploring Innovation"
+        titleHighlight="Through Projects"
+        description="        In my personal projects, I focus on leveraging emerging technologies to
+        build functional and innovative web applications. These projects allow
+        me to explore new tools and frameworks while honing my skills and
+        pushing the boundaries of what’s possible. Whether working solo or
+        experimenting with collaborative features, each project serves as an
+        opportunity to learn, innovate, and create solutions that are both
+        practical and engaging. My approach is rooted in continuous improvement,
+        creativity, and a passion for technology, ensuring that every project I
+        work on is both a learning experience and a showcase of my technical
+        growth."
+      />
       <div className="container mt-24 min-h-screen">
         <div className="flex items-center justify-between flex-wrap">
           <motion.div

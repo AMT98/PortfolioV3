@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { slideIn } from "../utils/motion.tsx";
-import About from "./AboutCareer.tsx";
+import About from "./About.tsx";
 import { TypingText } from "./CustomTexts";
 import { staggerContainer } from "../utils/motion.tsx";
 
@@ -11,7 +11,19 @@ const Career = () => {
 
   return (
     <section id="career">
-      <About />
+      <About
+        title="Creative"
+        description="I am a developer
+        passionate about crafting innovative web solutions by leveraging
+        emerging technologies. My career is built on a strong foundation of
+        technical expertise combined with effective collaboration and
+        problem-solving skills. Throughout my journey, I have honed my ability
+        to drive impactful results through continuous learning and critical
+        thinking. With diverse experience across different teams, I focus on
+        delivering high-quality applications that improve user experiences and
+        contribute to business success."
+        titleHighlight="Developer"
+      />
       <motion.div
         variants={staggerVariants}
         initial="hidden"

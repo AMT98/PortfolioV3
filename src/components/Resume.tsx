@@ -1,10 +1,17 @@
 import React from "react";
-import AboutResume from "./AboutResume";
+import About from "./About";
 
 const Resume: React.FC = () => {
   return (
     <>
-      <AboutResume />
+      <About
+        title="View My"
+        titleHighlight="Resume"
+        description="        I’ve curated my resume to highlight my skills, experience, and the
+        projects I’ve worked on. If you’re interested in seeing more about my
+        background and how I can contribute to your team, feel free to download
+        or view my resume."
+      />
       <div className="flex flex-col justify-center items-center h-screen mt-24">
         <div className="rounded-xl flex gap-3 p-2 ">
           <a

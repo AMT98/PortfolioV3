@@ -2,10 +2,9 @@ import React, { Dispatch, SetStateAction } from "react";
 import { projectData } from "../assets/data/projectData";
 
 interface ModalProps {
-  activeId: string | boolean | null; // Adjust type if necessary
+  activeId: string | boolean | null;
   setShowModal: Dispatch<SetStateAction<boolean>>;
 }
-
 
 const Modal: React.FC<ModalProps> = ({ activeId, setShowModal }) => {
   const project = projectData.find((project) => project.id === activeId);
@@ -34,9 +33,7 @@ const Modal: React.FC<ModalProps> = ({ activeId, setShowModal }) => {
           <h2 className="text-2xl text-headingColor font-[700] my-5">
             {project?.title}
           </h2>
-          <p className="text-[15px] leading-7 text-smallTextColor">
-            {project?.github}
-          </p>
+
           <div className="mt-5 flex items-center gap-3 flex-wrap">
             <h4 className="text-headingColor text-[18px] text-[700]">
               Technologies:
@@ -51,15 +48,22 @@ const Modal: React.FC<ModalProps> = ({ activeId, setShowModal }) => {
               </span>
             ))}
           </div>
-          <a href={project?.liveSite}>
-            <button className="bg-primaryColor text-white py-2 px-4 my-8 rounded-[8px] font-[500] hover:bg-headingColor ease-in duration-300">
-              Live Site
-            </button>
-          </a>
+          <div className="flex gap-2 items-center justify-center">
+            <a href={project?.liveSite}>
+              <button className="bg-primaryColor text-white py-2 px-4 my-8 rounded-[8px] font-[500] hover:bg-headingColor ease-in duration-300">
+                Live Site
+              </button>
+            </a>
+            <a href={project?.github}>
+              <button className="bg-primaryColor text-white py-2 px-4 my-8 rounded-[8px] font-[500] hover:bg-headingColor ease-in duration-300">
+                Github
+              </button>
+            </a>
+          </div>
         </div>
         <button
           onClick={() => setShowModal(false)}
-          className="w-[1.8rem] h-[1.8rem] bg-white absolute top-[1.7rem] right-[1.7rem] text-[25px] flex items-center justify-center rounded-[3px] leading-0 cursor-pointer"
+          className="overflow-hidden w-[1.8rem] h-[1.8rem] bg-white absolute top-[1.7rem] right-[1.7rem] text-[25px] flex items-center justify-center rounded-[3px] leading-0 cursor-pointer"
         >
           &times;
         </button>

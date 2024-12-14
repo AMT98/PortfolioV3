@@ -27,7 +27,7 @@ const Resume: React.FC = () => {
         <iframe
           src="aswinmalla_resume.pdf"
           title="Resume"
-          className="w-full sm:w-3/4 md:w-2/3 lg:w-full h-full border rounded-lg shadow-lg"
+          className="hidden md:block w-full sm:w-3/4 md:w-2/3 lg:w-full h-full border rounded-lg shadow-lg"
         />
       </div>
     </>

@@ -38,7 +38,7 @@ const Countup: React.FC = () => {
             )}
           </p>
           <span className="text-gray-400 text-sm mt-1">
-            Years of Experience
+            Years of Professional Experience
           </span>
         </div>
 
@@ -49,7 +49,7 @@ const Countup: React.FC = () => {
             )}
           </p>
           <span className="text-gray-400 text-sm mt-1">
-            Technologies Mastered
+            Cutting-Edge Tools and Frameworks
           </span>
         </div>
 

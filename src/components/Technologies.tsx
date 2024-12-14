@@ -82,8 +82,6 @@ const Technologies: React.FC = () => {
                 <li className="border-b py-4 font-bold">PostgreSQL</li>
                 <li className="border-b py-4 font-bold">Node.JS</li>
                 <li className="border-b py-4 font-bold">Express</li>
-                <li className="border-b py-4 font-bold">C#</li>
-                <li className="border-b py-4 font-bold">.NET</li>
               </ul>
               <div className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6"></div>
             </motion.div>

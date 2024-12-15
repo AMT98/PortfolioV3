@@ -1,13 +1,78 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { slideIn } from "../utils/motion.tsx";
 import About from "./About.tsx";
 import { TypingText } from "./CustomTexts";
 import { staggerContainer } from "../utils/motion.tsx";
 
-const Career = () => {
+interface ModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  jobTitle: string;
+  company: string;
+  duration: string;
+  description: string;
+}
+const Modal: React.FC<ModalProps> = ({
+  isOpen,
+  onClose,
+  jobTitle,
+  company,
+  duration,
+  description,
+}) => {
+  if (!isOpen) return null;
+
+  return (
+    <div
+      className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
+      onClick={onClose}
+    >
+      <div
+        className="bg-white p-6 rounded-lg shadow-lg w-11/12 sm:w-3/4 md:w-1/2"
+        onClick={(e) => e.stopPropagation()} // Prevent modal closing on clicking inside
+      >
+        <h3 className="text-xl font-bold">{jobTitle}</h3>
+        <p className="text-sm text-gray-600">{company}</p>
+        <span className="block text-sm text-gray-500">{duration}</span>
+        <p className="mt-4">{description}</p>
+        <button
+          className="mt-4 px-4 py-2 bg-primaryColor text-white rounded"
+          onClick={onClose}
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  );
+};
+
+const Career: React.FC = () => {
+  const [modalOpen, setModalOpen] = useState<boolean>(false);
+  const [modalContent, setModalContent] = useState<{
+    jobTitle: string;
+    company: string;
+    duration: string;
+    description: string;
+  }>({
+    jobTitle: "",
+    company: "",
+    duration: "",
+    description: "",
+  });
   const leftSlideInVariants = slideIn("left", "tween", 0.2, 1);
   const rightSlideInVariants = slideIn("right", "tween", 0.3, 1);
   const staggerVariants = staggerContainer(0.1, 0.2);
+
+  const handleCardClick = (
+    jobTitle: string,
+    company: string,
+    duration: string,
+    description: string
+  ) => {
+    setModalContent({ jobTitle, company, duration, description });
+    setModalOpen(true);
+  };
 
   return (
     <section id="career">
@@ -58,7 +123,17 @@ const Career = () => {
                 animate="show"
                 className="mt-6 sm:mt-0 sm:mb-12"
               >
-                <div className="flex items-center flex-col sm:flex-row">
+                <div
+                  className="flex items-center flex-col sm:flex-row cursor-pointer"
+                  onClick={() =>
+                    handleCardClick(
+                      "Web Developer",
+                      "Ascent Classical Academies",
+                      "October 2023 - Present",
+                      "Managed and maintained over 10 school websites, optimizing performance, ensuring a seamless user experience, and providing timely updates across all platforms. Integrated third-party tools and APIs, including Zapier and Google Analytics, to automate workflows, enhance website functionality, and support data-driven decision-making."
+                    )
+                  }
+                >
                   <div className="flex justify-start w-full mx-auto items-center">
                     <div className="w-full sm:w-1/2 sm:flex-row">
                       <div className="bg-white p-4 rounded shadow group hover:bg-primaryColor cursor-pointer ease-in duration-150">
@@ -89,7 +164,17 @@ const Career = () => {
                 animate="show"
                 className="mt-6 sm:mt-0 sm:mb-12"
               >
-                <div className="flex items-center flex-col sm:flex-row">
+                <div
+                  className="flex items-center flex-col sm:flex-row cursor-pointer"
+                  onClick={() =>
+                    handleCardClick(
+                      "Software Engineer",
+                      "echowin",
+                      "October 2022 - October 2023",
+                      "Engineered dynamic navigation menu components for Echowin using Next.js, TypeScript, SASS, and CMS, enhancing user experience and site interactivity. Collaborated with a cross-functional team of 7 to revamp and optimize the website's UI and layout, improving visual appeal and usability."
+                    )
+                  }
+                >
                   <div className="flex justify-end w-full mx-auto items-center">
                     <div className="w-full sm:w-1/2 sm:flex-row">
                       <div className="bg-white p-4 rounded shadow group hover:bg-primaryColor cursor-pointer ease-in duration-150">
@@ -119,7 +204,17 @@ const Career = () => {
                 animate="show"
                 className="mt-6 sm:mt-0 sm:mb-12"
               >
-                <div className="flex items-center flex-col sm:flex-row">
+                <div
+                  className="flex items-center flex-col sm:flex-row cursor-pointer"
+                  onClick={() =>
+                    handleCardClick(
+                      "Web Developer",
+                      "Namaste Transportation",
+                      "January 2021 - October 2022",
+                      "Managed and maintained the company website, ensuring accurate, up-to-date content and optimizing it for search engines, which improved SEO performance. Led a comprehensive website redesign that enhanced user experience and resulted in a 58% increase in website traffic."
+                    )
+                  }
+                >
                   <div className="flex justify-start w-full mx-auto items-center">
                     <div className="w-full sm:w-1/2 sm:flex-row">
                       <div className="bg-white p-4 rounded shadow group hover:bg-primaryColor cursor-pointer ease-in duration-150">
@@ -146,6 +241,15 @@ const Career = () => {
           </div>
         </div>
       </motion.div>
+      {/* Modal Component */}
+      <Modal
+        isOpen={modalOpen}
+        onClose={() => setModalOpen(false)}
+        jobTitle={modalContent.jobTitle}
+        company={modalContent.company}
+        duration={modalContent.duration}
+        description={modalContent.description}
+      />
     </section>
   );
 };

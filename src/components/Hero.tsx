@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import heroImg from "/A.m.jpg";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -9,6 +9,12 @@ import Countup from "./Countup";
 
 const Hero: React.FC = () => {
   const staggerVariants = staggerContainer(0.1, 0.2);
+  const [isRotating, setIsRotating] = useState(false);
+
+  const handleClick = () => {
+    setIsRotating(!isRotating);
+  };
+
   return (
     <div className="min-h-screen">
       <section className=" pt-0 mt-8 " id="hero">
@@ -35,7 +41,14 @@ const Hero: React.FC = () => {
               </motion.h1>
 
               <span>
-                <i className="ri-apps-2-line"></i>
+                <p
+                  className={`cursor-pointer hover:text-primaryColor transition-transform duration-500 ${
+                    isRotating ? "animate-spin" : ""
+                  }`}
+                  onClick={handleClick}
+                >
+                  <i className="ri-apps-2-line"></i>
+                </p>
               </span>
               <p className="text-headingColor mt-6 font-[500] text-[15px] leading-7 sm:pl-14 sm:pr-10">
                 A{" "}

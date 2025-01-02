@@ -1,6 +1,15 @@
 export const projectData = [
   {
     id: "1",
+    imgUrl: "/splitWise.png",
+    title: "Split Wise 🧑🏽‍💻",
+    // liveSite: "https://caringhandshomecare.net/",
+    github: "https://github.com/AMT98/splitWise",
+    category: "Fullstack Development",
+    technologies: ["React", "JavaScript", "TailwindCSS", "Rails", "PostgreSQL", "Redux"],
+  },
+  {
+    id: "2",
     imgUrl: "/caringHands.png",
     title: "Caring Hands 🧑🏽‍💻",
     liveSite: "https://caringhandshomecare.net/",
@@ -9,7 +18,7 @@ export const projectData = [
     technologies: ["React", "JavaScript", "TailwindCSS"],
   },
   {
-    id: "2",
+    id: "3",
     imgUrl: "/gemini.png",
     title: "Gemini Clone 🧑🏽‍💻",
     // liveSite: "https://github.com/AMT98/gemini-clone",
@@ -19,7 +28,7 @@ export const projectData = [
   },
 
   {
-    id: "3",
+    id: "4",
     imgUrl: "/api.avif",
     title: "Todo Rails 🧑🏽‍💻",
     // liveSite: "https://github.com/AMT98/todo-app-rails",
@@ -28,7 +37,7 @@ export const projectData = [
     technologies: ["React", "JavaScript", "TailwindCSS", "PostgreSQL", "Rails"],
   },
   {
-    id: "4",
+    id: "5",
     imgUrl: "/codeThreads.PNG",
     title: "CodeThreads 🧑🏽‍💻",
     liveSite: "https://codethreads.netlify.app/",
@@ -46,7 +55,7 @@ export const projectData = [
     ],
   },
   {
-    id: "5",
+    id: "6",
     imgUrl: "/strangersThings.PNG",
     title: "Strangers Things 🧑🏽‍💻",
     liveSite: "https://st-amt98.netlify.app",

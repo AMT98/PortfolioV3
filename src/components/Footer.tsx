@@ -14,7 +14,7 @@ const Footer: React.FC = () => (
             </span>
           </h4>
           <p className="font-normal text-[14px] text-black opacity-50">
-            Copyright © 2024 Aswin Malla. All rights reserved.
+            Copyright © 2025 Aswin Malla. All rights reserved.
           </p>
         </div>
       </div>

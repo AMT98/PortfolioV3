@@ -12,6 +12,7 @@ const Resume: React.FC = () => {
         background and how I can contribute to your team, feel free to download
         or view my resume."
       />
+      {/* aswinmalla to AswinMalla */}
       <div className="flex flex-col justify-center items-center h-screen mt-24">
         <div className="rounded-xl flex gap-3 p-2 ">
           <a
